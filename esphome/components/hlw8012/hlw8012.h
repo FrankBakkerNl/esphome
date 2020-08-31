@@ -39,6 +39,7 @@ class HLW8012Component : public PollingComponent {
   float current_resistor_{0.001};
   float voltage_divider_{2351};
   uint64_t cf_total_pulses_{0};
+  uint32_t last_update_;
   GPIOPin *sel_pin_;
   GPIOPin *cf_pin_;
   pulse_counter::PulseCounterStorage cf_store_;

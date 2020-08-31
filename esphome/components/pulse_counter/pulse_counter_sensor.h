@@ -67,6 +67,7 @@ class PulseCounterSensor : public sensor::Sensor, public PollingComponent {
   PulseCounterStorage storage_;
   uint32_t current_total_ = 0;
   sensor::Sensor *total_sensor_;
+  uint32_t last_update_;
 };
 
 #ifdef ARDUINO_ARCH_ESP32
